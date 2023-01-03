@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="header"></div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <!-- *ngFor="let employee of employeeService.employee" -->
+      <tr>
+        <th>ID</th>
+        <th>professor Name</th>
+        <th>Gender</th>
+        <th>Dept No.</th>
+        <th>Salary</th>
+        <th>Date of Joining</th>
+        <th>Date of Birth</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let professor of professorService.professors">
+        <td>{{ professor.professorId }}</td>
+        <td>{{ professor.firstName }} {{ professor.lastName }}</td>
+        <td>{{ professor.gender }}</td>
+        <td>{{ professor.deptNo }}</td>
+        <td>{{ professor.salary }}</td>
+        <td>{{ professor.joiningDate }}</td>
+        <td>{{ professor.dateOfBirth }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
